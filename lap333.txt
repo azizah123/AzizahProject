@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title> lap3  </title>
+
+</head>
+<body>    
+<h2>Welcome to Millenium Gynmastic Booster Club Pupcorn Sales</h2>
+<form action="" name="mform" onsubmit="return validate()" method="post">
+
+Buyer's names:  <input type="text" name="ename"><br/>
+street adress:  <input type="text" name="Street"><br/>
+city,stste,zip:  <input type="text" name="country"><br/></br>
+
+
+<table>
+<tr>
+<th> product name</th>
+<th> price </th>
+<th> quantaty </th>
+</tr>
+
+<tr>
+<td> unpoped popcorn (1 1b) </td>
+<td> 3.00$ </td>
+<td> <input type="text" name="b1"> </td>
+</tr>
+
+
+<tr>
+<td> caramel popcorn (2 1b) </td>
+<td> 3.50$ </td>
+<td> <input type="text" name="b2"> </td>
+</tr>
+
+<tr>
+<td> carmel nut popcorn (2 1b) </td>
+<td> 4.50$ </td>
+<td> <input type="text" name="b3"> </td>
+</tr>
+
+<tr>
+<td> tofy nut popcorn (2 1b) </td>
+<td> 5.00$ </td>
+<td> <input type="text" name="b4"> </td>
+</tr>
+</table>
+
+<h3> pyment mthod:</h3>
+
+  
+   <input type = "radio"  name = "rating"  value = "star-5" checked = "checked" >
+     <label title="5 stars">  visa </label><br/>
+	 
+   <input type = "radio"  name = "rating"  value = "star-5" >
+         <label title="5 stars"> mester card </label><br/>
+		 
+  <input type = "radio"  name = "rating"  value = "star-5" >
+  <label title="5 stars"> Discover</label><br/>
+  
+   <input type = "radio"  name = "rating" value="star-5"> 
+           <label title="5 stars"> check </label><br/>
+  
+  <input type="button" onclick="validate()" value="Submit order">
+    <input type="reset" value=" Clear Order Form">
+	
+	</form>
+<script type = "text/javascript">
+			function validate() {
+			var form=document.mform.elements;
+			var a = form.b1.value;
+	        var b = form.b2.value;
+		   var c = form.b3.value;
+	        var d = form.b4.value;
+		 var x = form.ename.value;
+		 var y = form.Street.value;
+		 var z = form.country.value;
+		 
+		 if (a == ""||b == ""||c == ""||d == ""||x == ""||y == ""||z == "")
+		 {alert("palse enter all fieled");
+		 return false;
+		 }
+		 else if(isNaN(a)||isNaN(b)||isNaN(c)||isNaN(d))
+		 		 {alert("must enter number");
+				 		 return false;
+				 }
+       else  {var total=a*3.00+b*3.50+c*4.50+d*5.00;
+		 alert("total price:"+total);
+		 }
+		 }
+  </script> 
+            
+			</body>
+			</html>
